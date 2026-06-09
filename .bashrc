@@ -1,6 +1,9 @@
 # manpage colorization
 source ~/.manpage_color.sh
 
+# uv shell auto completion
+source ~/.uv_shell_completion.sh
+
 # for ruby env
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
