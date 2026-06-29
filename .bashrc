@@ -1,3 +1,6 @@
+# remove mounted windows dirve from wsl path
+export PATH=$(echo "$PATH" | sed -e 's/:\/mnt\/[a-z]\/[^:]*//g' -e 's/^\/mnt\/[a-z]\/[^:]*://g')
+
 # manpage colorization
 source ~/.manpage_color.sh
 
@@ -6,7 +9,7 @@ source ~/.uv_shell_completion.sh
 
 # for ruby env
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - bash)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # for neovim (nvim)
